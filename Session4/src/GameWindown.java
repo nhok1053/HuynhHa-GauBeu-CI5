@@ -18,6 +18,7 @@ public class GameWindown extends Frame implements Runnable{
     BufferedImage bufferedImage;
     Graphics bufferedImageGraphics;
     Thread thread;
+    Thread t;
     PlaneController planeController1;
     public GameWindown(){
         System.out.println("Game windown open");
@@ -70,6 +71,21 @@ public class GameWindown extends Frame implements Runnable{
         planeController1 = PlaneController.getPlaneController1();
 
         this.addKeyListener(planeController1);
+      Thread enemyPlane = new Thread(){
+          @Override
+          public void run() {
+              while(true){
+                  try {
+                      Thread.sleep(100);
+                      EnemyManager.instance.run();
+                      CollsionPool.instance.run();
+                  } catch (InterruptedException e) {
+                      e.printStackTrace();
+                  }
+              }
+          }
+      };
+      enemyPlane.start();
     }
 
     @Override
@@ -88,7 +104,7 @@ public class GameWindown extends Frame implements Runnable{
                 Thread.sleep(17);
                 PlaneController.getPlaneController1().run();
                 CollsionPool.instance.run();
-                EnemyManager.instance.run();
+
                 repaint();
             } catch (InterruptedException e) {
                 e.printStackTrace();

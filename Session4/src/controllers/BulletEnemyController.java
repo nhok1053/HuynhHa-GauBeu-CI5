@@ -7,7 +7,7 @@ import views.GameDrawer;
  * Created by Ha San~ on 8/3/2016.
  */
 public class BulletEnemyController extends SingleController implements Colliable{
-    public static final int SPEED = 10;
+    public static final int SPEED = 7;
     public BulletEnemyController(GameObject gameObject, GameDrawer gameDrawer) {
         super(gameObject, gameDrawer);
         this.gameVector.dy = 10;
