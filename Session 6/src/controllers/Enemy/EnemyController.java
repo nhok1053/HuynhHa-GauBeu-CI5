@@ -11,9 +11,6 @@ import models.Enemy;
 import views.GameDrawer;
 import views.ImageDrawer;
 
-/**
- * Created by qhuydtvt on 7/31/2016.
- */
 
 public class EnemyController extends
         SingleController implements
@@ -28,10 +25,7 @@ public class EnemyController extends
     private FreezeBehavior freezeBehavior;
     private ShotBehavior shotBehavior;
     private FlyBehavior flyBehavior;
-    public EnemyController(Enemy gameObject, GameDrawer gameDrawer,
-                           FreezeBehavior freezeBehavior,
-                           FlyBehavior flyBehavior,
-                           ShotBehavior shotBehavior) {
+    public EnemyController(Enemy gameObject, GameDrawer gameDrawer,FreezeBehavior freezeBehavior,FlyBehavior flyBehavior,ShotBehavior shotBehavior) {
         super(gameObject, gameDrawer);
 
         //this.gameVector.dy = SPEED;

@@ -25,7 +25,6 @@ public class BombController extends SingleController implements Colliable {
     @Override
     public void onCollide(Colliable colliable) {
         if(colliable instanceof PlaneController) {
-
             NotificationCenter.instance.onBomExpode(gameObject.getX(), gameObject.getY());
 //            Utils.playSound("resources/explosion.wav", false);
             gameObject.destroy();

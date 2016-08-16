@@ -2,6 +2,7 @@ import controllers.*;
 import controllers.Bomb.BombControllerManager;
 import controllers.Enemy.EnemyBulletControllerManager;
 import controllers.Enemy.EnemyControllerManager;
+import models.GameSetting;
 import utils.Utils;
 
 import java.awt.*;
@@ -15,7 +16,7 @@ import java.awt.image.BufferedImage;
  */
 public class GameWindow extends Frame implements Runnable {
     Image background;
-
+    GameSetting gameSetting;
     BufferedImage bufferedImage;
     Graphics bufferImageGraphic;
     Thread thread;
@@ -23,9 +24,10 @@ public class GameWindow extends Frame implements Runnable {
 //    PlaneController planeController1;
 
     public GameWindow() {
+        gameSetting =  GameSetting.getInstance();
         System.out.println("Game window constructor");
         this.setVisible(true);
-        this.setSize(600, 800);
+        this.setSize(gameSetting.getScreenWidth(), gameSetting.getScreenHeight());
         this.setLocation(0, 0);
 
         this.addWindowListener(new WindowListener() {
@@ -65,27 +67,8 @@ public class GameWindow extends Frame implements Runnable {
 
             }
         });
-
         background = Utils.loadImage("resources/background.png");
-
-
         this.addKeyListener(PlaneController.instance);
-
-//        this.addMouseMotionListener(new MouseMotionListener() {
-//            @Override
-//            public void mouseDragged(MouseEvent e) {
-//
-//            }
-//
-//            @Override
-//            public void mouseMoved(MouseEvent e) {
-//                plane1.moveTo(e.getX() - plane2Width / 2,
-//                        e.getY() - plane2Height / 2);
-//
-//            }
-//
-//        });
-
         this.bufferedImage = new BufferedImage(600, 800, BufferedImage.TYPE_INT_ARGB);
         this.bufferImageGraphic = bufferedImage.getGraphics();
         thread = new Thread(this);
