@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Viewcompoundturn1">
+        <attr name="value" format="integer"/>
+        <attr name="labell" format="string" />
+    </declare-styleable>
+</resources>
