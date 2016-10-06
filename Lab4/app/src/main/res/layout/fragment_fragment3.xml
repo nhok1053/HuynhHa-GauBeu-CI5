@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#69F0AE"
+    tools:context="com.example.hasan.lab4.Fragment3">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:id="@+id/abc"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment\nsuccessful"/>
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="30dp"
+            android:layout_below="@id/tv1"
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40,00 $"/>
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:layout_below="@id/tv2"
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECEPIENT"/>
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="17dp"
+            android:layout_below="@id/tv3"
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lester Nygaard"/>
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:layout_below="@id/tv4"
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOTE"/>
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="17dp"
+            android:layout_below="@id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="It was a husmorouly perilous\nbusiness for both of us  "/>
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/check"
+        android:layout_marginTop="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/check"
+        android:layout_below="@id/abc"
+        android:layout_marginLeft="80dp"
+        />
+</RelativeLayout>
